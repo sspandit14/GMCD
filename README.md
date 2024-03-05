@@ -1,0 +1,1 @@
+Test Discord Bot written in JS, adapted from freeCodeCamp.org "Code a Discord Bot with JavaScript - Host for Free in the Cloud"
