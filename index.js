@@ -5,7 +5,7 @@ const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
 const { token } = require('./config.json');
 
 // create a new client instance and provide it the Guilds (servers) Intents (permissions); client is the means by which to interact with the Discord API
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 // add a commands collection to the client so that we can acess commands written in other files efficiently (Collection is like an extended Map)
 client.commands = new Collection();
 
