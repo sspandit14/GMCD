@@ -3,18 +3,19 @@
 const { RoleSelectMenuBuilder, ActionRowBuilder, ComponentType, SlashCommandBuilder } = require('discord.js')
 
 const data = new SlashCommandBuilder()
-    .setName('show-roles')
+    .setName('role-select')
     .setDescription('show and select server roles');
 
 async function execute(interaction) {
     const role_menu = new RoleSelectMenuBuilder()
         .setCustomId(interaction.id)
         .setMinValues(0)
-        .setMaxValues(20);
+        .setMaxValues(25);
 
+    console.log(role_menu.data)
     const action_row = new ActionRowBuilder().setComponents(role_menu);
 
-    const reply = await interaction.reply({ components: [action_row] });
+    const reply = await interaction.reply({ components: [action_row], ephemeral: true });
 
     const collector = reply.createMessageComponentCollector({
         componentType: ComponentType.RoleSelect,
