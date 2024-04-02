@@ -1,0 +1,11 @@
+Hello, I am the **GMCD** and am here to help _you_ help _me_ help **_you_**!
+
+To interact with me, just use slash commands -- to do that, type '/' followed by a command name that will appear on screen (and any arguments in necessary)
+
+Some helpful commands are:
+- /gmcd-help: this command!
+- /role-select: bring up a list of available roles to select and be assigned _or_ unassign (simply click the role(s) you want or don't want and click off the box when you're done)
+    - ideally dismissing the messages when you are done would be good as any changes made to my code won't be reflected in older interactions and so there may be some unintended behaviour otherwise...
+- /birthday: tell me your birthday so I don't forget to wish you on the big day!
+- /user: feeling nostalgic? see _exactly_ when you joined the DataSC Discord Server!
+- /server: get a quick summary of the server (for now that means the population...)
