@@ -11,5 +11,6 @@ To Dos:
   - /help command that would outline not only the commands available and their specifics but also an overview of the interface perhaps? (the slash command descriptions seem good enough tho so not sure...) 
   - schedule command that displays an overview of upcoming events (ideally everything -- meetings, events, socials, etc.)
   - add google calendar integration (e.g. add to calander prompt or command for events)
+  - birthday bot features!
   - direct mailing list registration?
     - not sure if from a user's perspective it's easier to do "click link, enter email, boom" vs "slash command, enter email, boom"...
