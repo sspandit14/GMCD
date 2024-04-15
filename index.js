@@ -2,7 +2,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
-const { token } = require('./config.json');
+const { connect } = require('mongoose');
+const { token, mongoDBToken } = require('./config.json');
 
 // create a new client instance and provide it the Guilds (servers) Intents (permissions); client is the means by which to interact with the Discord API
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
@@ -32,6 +33,17 @@ for (const folder of command_folders_) {
     }
 }
 
+const function_folders = fs.readdirSync('./functions');
+for (const folder of function_folders) {
+    const function_files = fs
+        .readdirSync(`./functions/${folder}`)
+        .filter((file) => file.endsWith('.js'));
+    for (const file of function_files)
+        require(`./functions/${folder}/${file}`)(client);
+}
+
+client.handleEvents();
+
 // when the client is ready and online a message is logged to the console
 client.on('ready', () => {
     console.log(`${client.user.tag}, at your service!`);
@@ -60,3 +72,8 @@ client.on('interactionCreate', async interaction => {
 
 // login using the bot token
 client.login(token);
+
+// connect to our MongoDB
+(async () => {
+    await connect(mongoDBToken).catch(console.error);
+})();
