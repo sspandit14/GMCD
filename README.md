@@ -14,3 +14,8 @@ To Dos:
   - birthday bot features!
   - direct mailing list registration?
     - not sure if from a user's perspective it's easier to do "click link, enter email, boom" vs "slash command, enter email, boom"...
+
+code based on tutorials by the following channels and resources:
+- Under Ctrl (https://www.youtube.com/@UnderCtrl)
+- Fusion Terror (https://www.youtube.com/@FusionTerror)
+- Discord.js Documentation
